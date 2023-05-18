@@ -1,2 +1,2 @@
 # dotfiles
-Hey there 👋. These are my Dotfiles for BSPWM rice.
+Hey there 👋 These are my Dotfiles for BSPWM rice.
