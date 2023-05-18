@@ -1,0 +1,99 @@
+# Launch programs
+super + Return
+	alacritty
+
+super + b
+	chromium
+
+super + f 
+	bspc node -t fullscreen
+
+super + e
+	thunar
+
+#reload sxhkd
+super + Escape 
+	pkill sxhkd && sxhkd &
+
+
+
+#Close focused window
+super + w 
+	bspc node -c
+
+#super + Tab
+	#bspc node -f next.local
+
+
+#rofi shortcuts
+super + space
+	rofi -show drun
+
+
+#switch tab rofi
+super + Tab
+	rofi -show
+
+#Brightness
+XF86MonBrightness{up,down}
+	brightnessctl set 355{+,-}
+
+#LockScreen
+super + l
+	betterlockscreen -l blur
+
+#Rofi-Wifi
+super + 1
+	rofi-wifi-menu.sh
+
+#printscreen
+@Print
+	screenshot
+
+#print region
+shift + @Print
+	screenshot select
+
+#print window
+control + @Print
+	screenshot window
+
+# Switch to the previous workspace
+super + alt + Left
+    bspc desktop -f prev
+
+# Switch to the next workspace
+super + alt + Right
+    bspc desktop -f next
+
+# Switch between gap presets
+super + shift + {y,u,i,o,p}
+	bspc config window_gap {0,5,10,20,30}
+
+# Dynamic Gaps
+super + shift bracket{left,right}
+	bspc config -d focused window_gap "$(($(bbspc config -d focused window_gap) {-,+} 5 ))"
+
+#Resizing
+super + shift + 1
+	bspc node -z bottom_right -10% -10%
+
+super + shift + 2
+	bspc node -z bottom_right +10% +10%
+
+super + shift + 3
+	bspc node -z bottom_left -10% -10%
+
+super + shift + 4
+	bspc node -z bottom_left +10% +10%
+
+super + shift + 5
+	bspc node -z top 0 10%
+
+super + shift + 6
+	bspc node -z top 0 -10%
+
+#Swap Windows
+super + alt + s
+	bspc node -s $(xorg-choose-window oijklmhnup \
+    -b $(bspc query -N -n focused))
