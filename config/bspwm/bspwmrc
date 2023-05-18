@@ -1,0 +1,86 @@
+#!/bin/sh
+
+# Set the wallpaper
+feh --bg-fill /home/techvishnu/Downloads/images/saket.jpg
+
+#bash ~/.config/polybar/launch.sh --forest &
+
+# Launch the sxhkd daemon
+sxhkd &
+if [[ $(xrandr -q | grep 'HDMI-1-0 connected') ]]; then
+	xrandr --output eDP-1 --primary --mode 2560x1440 --rotate normal --output HDMI-1-0 --mode 1920x1080 --rotate normal --left-of eDP-1
+fi
+
+#xrandr --auto
+
+bspc monitor eDP-1 -d 1 2 3 4
+bspc monitor HDMI-1-0 -d 5 6 7 8
+
+#~/.config/polybar/launch.sh
+
+# Start the polybar status bar
+polybar example &
+picom &
+exec --no-startup-id pulseaudio --start
+# Launch the bspwm window manager
+exec bspwm
+
+dmenu_run &
+
+bspc rule -a Alacritty desktop='^2' state=floating rectangle=1200x800+50+50
+
+~/.fehbg &
+
+#Keybindings
+
+super + f :firefox
+super + t : alacritty
+
+#polybar --config=/home/techvishnu/.config/polybar/config bar &
+
+#sed -i 's/^bspc monitor -d.*$/&\npolybar --config=\/home\/techvishnu\/.config\/polybar\/config bspwm \&/' ~/.config/bspwm/bspwmrc
+
+
+
+
+# Close focused window
+super + w  : bspc node -c
+
+#focus the next window on current desktop
+#super + Tab
+#	bspc node -f next.local
+
+#switch tab using rofi
+super + Tab
+	rofi -show
+
+
+#focus the previous window in current desktop
+#super + Shift + Tab
+#	bspc node -f prev.local
+
+bspc config border_width 2
+bspc config border_color "#ffffff"
+
+## Launch Polybar
+#bash ~/.config/polybar/launch.sh --hack
+
+#Lock Screen
+super + l
+	betterlockscreen -l blur
+##Launch polybar
+#exec_always /home/techvishnu/polybar/launch.sh --forest &
+
+#exec_always --no-startup-id $HOME/.config/polybar/launch.sh --forest
+#exec_always --no-startup-id $HOME/.config/polybar/forest/scripts/pywal.sh ~/home/techvishnu/Downloads/images/purple.png
+
+
+# Increase diagonal size of focused window
+bspc config borderless_monocle true
+bspc config split_ratio          0
+bspc config window_gap           0
+bspc rule -a \* state=floating border=of
+
+
+export PATH="/usr/local/bin:$PATH"
+
