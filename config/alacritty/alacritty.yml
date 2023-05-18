@@ -1,0 +1,84 @@
+# Default settings
+window:
+  padding:
+    x: 8
+    y: 8
+
+# Font configuration
+font:
+  normal:
+    font: CaskaydiaCove Nerd Font Mono
+    style: Bold
+    size: 20
+
+# Cursor configuration
+cursor:
+  style:
+    shape: Beam
+  vi_mode_style:
+    shape: Beam
+# Colors
+# colors:
+#   # Primary colors
+#   primary:
+#     background: '0x1E2127'
+#     foreground: '0xD0D0D0'
+
+#   # Normal colors
+#   normal:
+#     black:   '0x1E2127'
+#     red:     '0xE06C75'
+#     green:   '0x98C379'
+#     yellow:  '0xE5C07B'
+#     blue:    '0x61AFEF'
+#     magenta: '0xC678DD'
+#     cyan:    '0x56B6C2'
+#     white:   '0xABABAB'
+
+#   # Bright colors
+#   bright:
+#     black:   '0x5C6370'
+#     red:     '0xE06C75'
+#     green:   '0x98C379'
+#     yellow:  '0xE5C07B'
+#     blue:    '0x61AFEF'
+#     magenta: '0xC678DD'
+#     cyan:    '0x56B6C2'
+#     white:   '0xFFFFFF'
+
+# Dracula color scheme for Alacritty
+colors:
+  primary:
+    background: '#282a36'
+    foreground: '#f8f8f2'
+  normal:
+    black:   '#21222C'
+    red:     '#FF5555'
+    green:   '#50FA7B'
+    yellow:  '#F1FA8C'
+    blue:    '#BD93F9'
+    magenta: '#FF79C6'
+    cyan:    '#8BE9FD'
+    white:   '#BFBFBF'
+  bright:
+    black:   '#4D4D4D'
+    red:     '#FF6E67'
+    green:   '#5AF78E'
+    yellow:  '#F4F99D'
+    blue:    '#CAA9FA'
+    magenta: '#FF92D0'
+    cyan:    '#9AEDFE'
+    white:   '#E6E6E6'
+
+      #font:
+      #size: 11
+      #family: Cascadia Code
+      #style: Regular
+      #offset:
+      #x: 0
+      #y: 0
+
+# Additional configuration options for Alacritty
+# ...
+
+
