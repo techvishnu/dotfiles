@@ -15,5 +15,5 @@
 
 ## 📑 Contents
 
->**Warning** The contents may not be up to date. I will still try update it from time to time if i can.
->**bspwm** These are the Dotfiles for my BSPWM Arch linux setup
+>**Warning** These are the Dotfiles for my Arch Linux BSPWM Setup
+
