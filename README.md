@@ -1,6 +1,6 @@
 <div align="center">
   <img src="http://wiki.installgentoo.com/images/f/f9/Arch-linux-logo.png" alt="arch logo" width=125>
-  <img src="https://nixos.org/logo/nixos-logo-only-hires.png" alt="nix logo" width=150>
+  <img src="https://github.com/baskerville/bspwm/blob/0.1/resources/bspwm_logo.png" alt="nix logo" width=150>
 </div>
 
 <h1 align="center">
