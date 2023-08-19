@@ -12,8 +12,14 @@
       <img src="https://img.shields.io/github/stars/InioX/dotfiles?color=7eb8e3&style=for-the-badge">
    </a>
 </h1>
+### 🐜 ScreenShot
 
-## 📑 Contents
+![](./bspwmRice.png)
 
->**Warning** These are the Dotfiles for my Arch Linux BSPWM Setup
+<details>
+<summary><b>Load More</b> <span style="font-size:14px;">(Click to expend) </span> </summary>
+
+- **Other Rices** • [Reddit](https://www.reddit.com/user/OnlyMemer420)🌿 I have pinned my Beginner rices on my reddit profile !
+
+</details>
 
